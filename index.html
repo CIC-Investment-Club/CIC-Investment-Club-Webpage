@@ -412,20 +412,20 @@
     <p class="section-subtitle">Our club is led by a dedicated team of student executives who plan events, develop curriculum, and keep our community thriving.</p>
     <div class="team-grid">
       <div class="team-card reveal">
-        <div class="team-avatar">P</div>
+        <div class="team-avatar">T</div>
         <div class="team-name">Tianlang Li</div>
         <div class="team-role">President</div>
         <div class="team-year">Class of 2024</div>
       </div>
       <div class="team-card reveal">
-        <div class="team-avatar">V</div>
+        <div class="team-avatar">H</div>
         <div class="team-name">Hanying</div>
         <div class="team-role">Vice President</div>
         <div class="team-year">Class of 2025</div>
       </div>
       <div class="team-card reveal">
-        <div class="team-avatar">T</div>
-        <div class="team-name">Your Name Here</div>
+        <div class="team-avatar">L</div>
+        <div class="team-name">Le Minh</div>
         <div class="team-role">Technology Lead</div>
         <div class="team-year">Class of 2024</div>
       </div>
@@ -686,7 +686,7 @@
         </div>
         <div class="form-group">
           <label>Student Email</label>
-          <input type="email" name="Email" placeholder="Your email address" />
+          <input type="email" name="Email" placeholder="your.email@cic.on.ca" />
         </div>
         <div class="form-group">
           <label>Grade / Year</label>
@@ -725,11 +725,11 @@
         <div class="divider"></div>
         <p class="section-subtitle" style="margin-bottom:1.5rem;">Have a question, an idea, or want to collaborate? We'd love to hear from you.</p>
         <div class="contact-methods">
-          <a href="/cdn-cgi/l/email-protection#593a303a30372f3c2a2d343c372d3a352c3b193a303a773637773a38" class="contact-item">
+          <a href="/cdn-cgi/l/email-protection#67040e040e09110214130a020913040b120527040e04490809490406" class="contact-item">
             <div class="contact-icon">✉️</div>
             <div>
               <div class="contact-label">Email</div>
-              <div class="contact-value"><span class="__cf_email__" data-cfemail="98fbf1fbf1f6eefdebecf5fdf6ecfbf4edfad8fbf1fbb6f7f6b6fbf9">[email&#160;protected]</span></div>
+              <div class="contact-value"><span class="__cf_email__" data-cfemail="1f7c767c7671697a6c6b727a716b7c736a7d5f7c767c317071317c7e">[email&#160;protected]</span></div>
             </div>
           </a>
           <a href="#" class="contact-item">
@@ -896,4 +896,14 @@
   const navLinks = document.querySelectorAll('.nav-links a');
   window.addEventListener('scroll', () => {
     let current = '';
-    sections.forEach(s => 
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 120) current = s.id;
+    });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current
+        ? 'var(--gold-light)' : '';
+    });
+  }, { passive: true });
+</script>
+</body>
+</html>
