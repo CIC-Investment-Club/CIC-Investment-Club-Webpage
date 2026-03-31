@@ -391,12 +391,12 @@
       <div class="about-visual reveal">
         <div class="about-visual-title">Our Mission</div>
         <ul class="mission-points">
-          <li>Democratize financial knowledge for all CIC students</li>
+          <li>Share financial knowledge for all CIC students</li>
           <li>Build hands-on experience with real market dynamics</li>
           <li>Develop critical thinking through investment analysis</li>
           <li>Foster a collaborative, inclusive investing community</li>
           <li>Prepare members for future finance careers and studies</li>
-          <li>Bridge the gap between classroom theory and real markets</li>
+          <li>Bridge the gap between classroom theory and real financial markets</li>
         </ul>
       </div>
     </div>
@@ -419,15 +419,9 @@
       </div>
       <div class="team-card reveal">
         <div class="team-avatar">V</div>
-        <div class="team-name">Hanying</div>
+        <div class="team-name">Hanying Weng</div>
         <div class="team-role">Vice President</div>
         <div class="team-year">Class of 2025</div>
-      </div>
-      <div class="team-card reveal">
-        <div class="team-avatar">T</div>
-        <div class="team-name">Your Name Here</div>
-        <div class="team-role">Technology Lead</div>
-        <div class="team-year">Class of 2024</div>
       </div>
     </div>
   </div>
@@ -677,16 +671,16 @@
         </ul>
       </div>
       <div class="recruitment-form-card reveal">
+        <form action="https://formspree.io/f/xykbwqvd" method="POST">
         <h3>Express Your Interest</h3>
         <p>Fill out the form below and we'll be in touch with next steps and onboarding info.</p>
-        <form action="https://formspree.io/f/xykbwqvd" method="POST">
         <div class="form-group">
           <label>Full Name</label>
           <input type="text" name="Full Name" placeholder="Your full name" />
         </div>
         <div class="form-group">
           <label>Student Email</label>
-          <input type="email" name="Email" placeholder="Your email address" />
+          <input type="email" name="Email" placeholder="Your email adddress" />
         </div>
         <div class="form-group">
           <label>Grade / Year</label>
@@ -725,7 +719,7 @@
         <div class="divider"></div>
         <p class="section-subtitle" style="margin-bottom:1.5rem;">Have a question, an idea, or want to collaborate? We'd love to hear from you.</p>
         <div class="contact-methods">
-          <a href="mailto:investmentclubincic@gmail.com" class="contact-item">
+          <a href="mailto:cicinvestmentclub@cic.on.ca" class="contact-item">
             <div class="contact-icon">✉️</div>
             <div>
               <div class="contact-label">Email</div>
@@ -736,21 +730,7 @@
             <div class="contact-icon">📸</div>
             <div>
               <div class="contact-label">Instagram</div>
-              <div class="contact-value">@cicinvestmentclub</div>
-            </div>
-          </a>
-          <a href="#" class="contact-item">
-            <div class="contact-icon">💼</div>
-            <div>
-              <div class="contact-label">LinkedIn</div>
-              <div class="contact-value">CIC Investment Club</div>
-            </div>
-          </a>
-          <a href="#" class="contact-item">
-            <div class="contact-icon">💬</div>
-            <div>
-              <div class="contact-label">Discord / Group Chat</div>
-              <div class="contact-value">Link shared upon joining</div>
+              <div class="contact-value">@investmentclubcic</div>
             </div>
           </a>
         </div>
@@ -790,7 +770,7 @@
   <div class="footer-copy">© 2026 CIC Investment Club · Columbia International College · Hamilton, Ontario, Canada</div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   // ── TICKER: Yahoo Finance via allorigins proxy ──
   const INDICES = [
     { symbol: '^GSPC',  label: 'S&P 500' },
@@ -869,7 +849,7 @@
         e.target.classList.add('visible');
       }
     });
-  }, { threshold: 0.05, rootMargin: '0px 0px 0px 0px' });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
@@ -896,4 +876,14 @@
   const navLinks = document.querySelectorAll('.nav-links a');
   window.addEventListener('scroll', () => {
     let current = '';
-    sections.forEach(s => 
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 120) current = s.id;
+    });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current
+        ? 'var(--gold-light)' : '';
+    });
+  }, { passive: true });
+</script>
+</body>
+</html>
