@@ -486,48 +486,7 @@
       <div class="divider"></div>
       <p class="section-subtitle">Stay up to date with our latest sessions, competitions, and club milestones.</p>
     </div>
-    <div class="events-list">
-      <div class="event-item reveal">
-        <div class="event-date-box"><div class="event-month">Apr</div><div class="event-day">07</div></div>
-        <div class="event-info">
-          <h4>Weekly Training Session — Introduction to Technical Analysis</h4>
-          <p>📍 Room TBD · Columbia International College · 4:00 PM – 5:30 PM</p>
-        </div>
-        <span class="event-tag upcoming">Upcoming</span>
-      </div>
-      <div class="event-item reveal">
-        <div class="event-date-box"><div class="event-month">Apr</div><div class="event-day">14</div></div>
-        <div class="event-info">
-          <h4>Weekly Training Session — Earnings Season Deep Dive</h4>
-          <p>📍 Room TBD · Columbia International College · 4:00 PM – 5:30 PM</p>
-        </div>
-        <span class="event-tag upcoming">Upcoming</span>
-      </div>
-      <div class="event-item reveal">
-        <div class="event-date-box"><div class="event-month">Apr</div><div class="event-day">28</div></div>
-        <div class="event-info">
-          <h4>Spring Semester Stock Competition — Mid-Point Portfolio Review</h4>
-          <p>📍 Main Hall · Columbia International College · 3:30 PM – 5:00 PM</p>
-        </div>
-        <span class="event-tag comp">Competition</span>
-      </div>
-      <div class="event-item reveal">
-        <div class="event-date-box"><div class="event-month">Jun</div><div class="event-day">15</div></div>
-        <div class="event-info">
-          <h4>Spring Semester Awards Ceremony & End-of-Year Celebration</h4>
-          <p>📍 Venue TBD · Columbia International College · 5:00 PM – 7:00 PM</p>
-        </div>
-        <span class="event-tag award">Awards</span>
-      </div>
-      <div class="event-item reveal">
-        <div class="event-date-box" style="padding:6px 13px;"><div class="event-month">Every</div><div class="event-day" style="font-size:1rem;line-height:1.4;">Mon</div></div>
-        <div class="event-info">
-          <h4>Weekly Training Session — Recurring All Year</h4>
-          <p>📍 Room TBD · Columbia International College · 4:00 PM – 5:30 PM</p>
-        </div>
-        <span class="event-tag recurring">Recurring</span>
-      </div>
-    </div>
+   <div class="events-list" id="events-list"></div>
   </div>
 </section>
 
@@ -538,44 +497,7 @@
     <h2 class="section-title">Market Insights</h2>
     <div class="divider"></div>
     <p class="section-subtitle">Short-form analysis and perspectives written by our members. We believe the best way to learn is to share.</p>
-    <div class="insights-grid">
-      <div class="insight-card reveal">
-        <div class="insight-tag-bar"><span class="insight-category cat-macro">Macro</span><span class="insight-date">Mar 22, 2026</span></div>
-        <div class="insight-body">
-          <div class="insight-title">What Rising Bond Yields Mean for Equity Investors</div>
-          <div class="insight-excerpt">As the Fed holds rates elevated, the 10-year Treasury yield has climbed past 4.8%. Here's how that reshapes the equity risk premium and where opportunities may still exist in this environment...</div>
-        </div>
-        <div class="insight-footer">
-          <div class="insight-author-avatar">AB</div>
-          <span class="insight-author-name">Member Placeholder</span>
-          <a href="#" class="insight-read-more">Read →</a>
-        </div>
-      </div>
-      <div class="insight-card reveal">
-        <div class="insight-tag-bar"><span class="insight-category cat-equity">Equity</span><span class="insight-date">Mar 15, 2026</span></div>
-        <div class="insight-body">
-          <div class="insight-title">Why NVIDIA's Moat Is Harder to Replicate Than It Looks</div>
-          <div class="insight-excerpt">Beyond the GPU hardware, NVIDIA's CUDA ecosystem creates a software lock-in that competitors AMD and Intel have struggled to break. A qualitative look at the real competitive advantage...</div>
-        </div>
-        <div class="insight-footer">
-          <div class="insight-author-avatar">CD</div>
-          <span class="insight-author-name">Member Placeholder</span>
-          <a href="#" class="insight-read-more">Read →</a>
-        </div>
-      </div>
-      <div class="insight-card reveal">
-        <div class="insight-tag-bar"><span class="insight-category cat-strategy">Strategy</span><span class="insight-date">Mar 08, 2026</span></div>
-        <div class="insight-body">
-          <div class="insight-title">The Case for Sector Rotation in Late-Cycle Markets</div>
-          <div class="insight-excerpt">Historical data suggests that energy, healthcare, and consumer staples tend to outperform in late economic cycles. How should a student investor rebalance their paper portfolio in Q2?...</div>
-        </div>
-        <div class="insight-footer">
-          <div class="insight-author-avatar">EF</div>
-          <span class="insight-author-name">Member Placeholder</span>
-          <a href="#" class="insight-read-more">Read →</a>
-        </div>
-      </div>
-    </div>
+    <div class="insights-grid" id="insights-grid"></div>
     <div style="text-align:center;margin-top:2.5rem;">
       <a href="#" class="btn-primary" style="background:var(--crimson);color:white;">View All Insights →</a>
     </div>
@@ -788,7 +710,128 @@
   <div class="footer-copy">© 2026 CIC Investment Club · Columbia International College · Hamilton, Ontario, Canada</div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
+  // ============================================================
+  // CONTENT CONFIG, change here when update is needed
+  // ============================================================
+ 
+  // Lists of events
+  // tag options: 'upcoming' | 'comp' | 'award' | 'recurring'
+  // If recurring，let day be empty str ''，month be'Every'
+  const EVENTS = [
+    {
+      month: 'Apr', day: '07',
+      title: 'Weekly Training Session — Introduction to Technical Analysis',
+      location: '📍 Room TBD · Columbia International College · 4:00 PM – 5:30 PM',
+      tag: 'upcoming'
+    },
+    {
+      month: 'Apr', day: '14',
+      title: 'Weekly Training Session — Earnings Season Deep Dive',
+      location: '📍 Room TBD · Columbia International College · 4:00 PM – 5:30 PM',
+      tag: 'upcoming'
+    },
+    {
+      month: 'Apr', day: '28',
+      title: 'Spring Semester Stock Competition — Mid-Point Portfolio Review',
+      location: '📍 Main Hall · Columbia International College · 3:30 PM – 5:00 PM',
+      tag: 'comp'
+    },
+    {
+      month: 'Jun', day: '15',
+      title: 'Spring Semester Awards Ceremony & End-of-Year Celebration',
+      location: '📍 Venue TBD · Columbia International College · 5:00 PM – 7:00 PM',
+      tag: 'award'
+    },
+    {
+      month: 'Every', day: 'Mon',
+      title: 'Weekly Training Session — Recurring All Year',
+      location: '📍 Room TBD · Columbia International College · 4:00 PM – 5:30 PM',
+      tag: 'recurring'
+    },
+  ];
+ 
+  // 📝 Insights List of articles (Newest at the first place, only demonstrate three
+  // category options: 'macro' | 'equity' | 'strategy' | 'tech'
+  // avatar: Abbreviation of the name of the author, e.g. 'TL'
+  // link: Link to the article, fill '#' if there is no.
+  const INSIGHTS = [
+    {
+      category: 'macro', date: 'Mar 22, 2026',
+      title: 'What Rising Bond Yields Mean for Equity Investors',
+      excerpt: 'As the Fed holds rates elevated, the 10-year Treasury yield has climbed past 4.8%. Here\'s how that reshapes the equity risk premium and where opportunities may still exist...',
+      avatar: 'AB', author: 'Member Placeholder', link: '#'
+    },
+    {
+      category: 'equity', date: 'Mar 15, 2026',
+      title: 'Why NVIDIA\'s Moat Is Harder to Replicate Than It Looks',
+      excerpt: 'Beyond the GPU hardware, NVIDIA\'s CUDA ecosystem creates a software lock-in that competitors AMD and Intel have struggled to break. A qualitative look at the real competitive advantage...',
+      avatar: 'CD', author: 'Member Placeholder', link: '#'
+    },
+    {
+      category: 'strategy', date: 'Mar 08, 2026',
+      title: 'The Case for Sector Rotation in Late-Cycle Markets',
+      excerpt: 'Historical data suggests that energy, healthcare, and consumer staples tend to outperform in late economic cycles. How should a student investor rebalance their paper portfolio in Q2?...',
+      avatar: 'EF', author: 'Member Placeholder', link: '#'
+    },
+  ];
+ 
+  // ============================================================
+  // RENDER FUNCTIONS
+  // ============================================================
+ 
+  const TAG_LABELS = { upcoming: 'Upcoming', comp: 'Competition', award: 'Awards', recurring: 'Recurring' };
+  const CAT_CLASSES = { macro: 'cat-macro', equity: 'cat-equity', strategy: 'cat-strategy', tech: 'cat-tech' };
+  const CAT_LABELS  = { macro: 'Macro', equity: 'Equity', strategy: 'Strategy', tech: 'Tech' };
+ 
+  function renderEvents() {
+    const container = document.getElementById('events-list');
+    container.innerHTML = EVENTS.map(e => {
+      const isRecurring = e.tag === 'recurring';
+      const dateBox = isRecurring
+        ? `<div class="event-date-box" style="padding:6px 13px;">
+             <div class="event-month">${e.month}</div>
+             <div class="event-day" style="font-size:1rem;line-height:1.4;">${e.day}</div>
+           </div>`
+        : `<div class="event-date-box">
+             <div class="event-month">${e.month}</div>
+             <div class="event-day">${e.day}</div>
+           </div>`;
+      return `<div class="event-item reveal">
+        ${dateBox}
+        <div class="event-info">
+          <h4>${e.title}</h4>
+          <p>${e.location}</p>
+        </div>
+        <span class="event-tag ${e.tag}">${TAG_LABELS[e.tag] || e.tag}</span>
+      </div>`;
+    }).join('');
+    // re-observe new elements
+    container.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  }
+ 
+  function renderInsights() {
+    const container = document.getElementById('insights-grid');
+    container.innerHTML = INSIGHTS.slice(0, 3).map(ins => `
+      <div class="insight-card reveal">
+        <div class="insight-tag-bar">
+          <span class="insight-category ${CAT_CLASSES[ins.category] || 'cat-macro'}">${CAT_LABELS[ins.category] || ins.category}</span>
+          <span class="insight-date">${ins.date}</span>
+        </div>
+        <div class="insight-body">
+          <div class="insight-title">${ins.title}</div>
+          <div class="insight-excerpt">${ins.excerpt}</div>
+        </div>
+        <div class="insight-footer">
+          <div class="insight-author-avatar">${ins.avatar}</div>
+          <span class="insight-author-name">${ins.author}</span>
+          <a href="${ins.link}" class="insight-read-more">Read →</a>
+        </div>
+      </div>`).join('');
+    container.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  }
+  renderEvents();
+  renderInsights();
   // ── TICKER: Yahoo Finance via allorigins proxy ──
   const INDICES = [
     { symbol: '^GSPC',  label: 'S&P 500' },
