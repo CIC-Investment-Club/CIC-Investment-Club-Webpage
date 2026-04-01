@@ -1,0 +1,25 @@
+:root {
+  /* Colors */
+  --crimson: #8B1A1A; /* Primary deep red */
+  --crimson-dark: #6B1212;
+  --crimson-light: #A52020;
+  --crimson-pale: #F9F0F0; /* Very light red/pinkish */
+
+  --gold: #C9A84C; /* Primary gold */
+  --gold-light: #E8C97A;
+
+  --white: #FFFFFF;
+  --off-white: #FAFAF8; /* Slightly off-white background */
+
+  /* Grays */
+  --gray-100: #F4F4F2; /* Lightest gray */
+  --gray-200: #E8E8E4;
+  --gray-400: #9A9A94;
+  --gray-600: #5A5A54;
+  --gray-900: #1A1A16; /* Darkest gray/Near black */
+
+  /* Fonts */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+}

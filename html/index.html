@@ -1,522 +1,580 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>CIC Investment Club</title>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="../css/styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CIC Investment Club</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../css/variables.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/layout.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/sections.css" />
+  <link rel="stylesheet" href="../css/animations.css" />
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a href="#hero" class="nav-logo">
-    <img src="../Logo.png" style="width:38px;height:38px;border-radius:8px;object-fit:cover;" alt="CIC Logo" />
-    <div class="nav-logo-text">
-      <span>Columbia International College</span>
-      <span>Investment Club</span>
-    </div>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#team">Team</a></li>
-    <li><a href="#activities">Activities</a></li>
-    <li><a href="#insights">Insights</a></li>
-    <li><a href="#resources">Resources</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#recruitment" class="nav-cta">Join Us →</a></li>
-  </ul>
-</nav>
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#hero" class="nav-logo">
+      <img src="../Logo.png" class="nav-logo-img" alt="CIC Logo" />
+      <div class="nav-logo-text">
+        <span>Columbia International College</span>
+        <span>Investment Club</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#activities">Activities</a></li>
+      <li><a href="#insights">Insights</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#recruitment" class="nav-cta">Join Us →</a></li>
+    </ul>
+  </nav>
 
-<!-- TICKER TAPE -->
-<div class="ticker-bar">
-  <div class="ticker-track" id="ticker">
-    <span class="ticker-item" style="color:rgba(255,255,255,0.45);font-family:var(--font-mono);font-size:0.76rem;letter-spacing:0.06em;">
-      ⏳ Loading market data...
-    </span>
-  </div>
-</div>
-
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-grid-bg"></div>
-  <div class="hero-glow"></div>
-  <div class="hero-inner">
-    <div>
-      <div class="hero-badge fade-in d1">Columbia International College · Hamilton, ON</div>
-      <h1 class="hero-title fade-in d2">
-        Where Students<br>Learn to <em>Invest</em><br>with Purpose.
-      </h1>
-      <p class="hero-desc fade-in d3">
-        The CIC Investment Club brings together curious minds to explore financial markets, develop analytical skills, and compete in simulated U.S. stock market challenges — together.
-      </p>
-      <div class="hero-actions fade-in d4">
-        <a href="#recruitment" class="btn-primary">Join the Club</a>
-        <a href="#activities" class="btn-outline">Our Activities</a>
-      </div>
-    </div>
-    <div class="hero-stats fade-in d4">
-      <div class="stat-card">
-        <div class="stat-icon">📅</div>
-        <div class="stat-number">52</div>
-        <div class="stat-label">Training Sessions / Year</div>
-      </div>
-      <div class="stat-card accent">
-        <div class="stat-icon">🏆</div>
-        <div class="stat-number gold">2×</div>
-        <div class="stat-label">Competitions / Year</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-icon">🇺🇸</div>
-        <div class="stat-number">US</div>
-        <div class="stat-label">Market Focus</div>
-      </div>
-      <div class="stat-card accent">
-        <div class="stat-icon">🎓</div>
-        <div class="stat-number gold">0</div>
-        <div class="stat-label">Experience Required</div>
-      </div>
+  <!-- MARKET DATA TICKER -->
+  <div class="ticker-bar">
+    <div class="ticker-track" id="ticker">
+      <span class="ticker-loading">
+        ⏳ Loading market data...
+      </span>
     </div>
   </div>
-</section>
 
-<!-- ABOUT -->
-<section id="about">
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-text reveal">
-        <div class="section-label">Who We Are</div>
-        <h2 class="section-title">Investing in Your Financial Future</h2>
-        <div class="divider"></div>
-        <p>The CIC Investment Club is a student-led organisation at Columbia International College dedicated to building financial literacy and investment acumen among our members. Whether you're a complete beginner or already following the markets, our club offers a structured, supportive environment to grow.</p>
-        <p>We believe every student deserves access to financial education. Through weekly training sessions and hands-on simulated trading competitions, we equip members with practical tools they'll carry well beyond their time at CIC.</p>
-        <div class="about-features">
-          <div class="feature-item">
-            <div class="feature-icon">📚</div>
-            <div>
-              <h4>Weekly Training Sessions</h4>
-              <p>Structured lessons on markets, valuation, macro-economics, and portfolio theory — every week, year-round.</p>
+  <!-- HERO SECTION -->
+  <section id="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge fade-in d1">Columbia International College · Hamilton, ON</div>
+        <h1 class="hero-title fade-in d2">
+          Where Students<br>Learn to <em>Invest</em><br>with Purpose.
+        </h1>
+        <p class="hero-desc fade-in d3">
+          The CIC Investment Club brings together curious minds to explore financial markets, develop analytical skills, and compete in simulated U.S. stock market challenges — together.
+        </p>
+        <div class="hero-actions fade-in d4">
+          <a href="#recruitment" class="btn-primary">Join the Club</a>
+          <a href="#activities" class="btn-outline">Our Activities</a>
+        </div>
+      </div>
+      <div class="hero-stats fade-in d4">
+        <div class="stat-card">
+          <div class="stat-icon">📅</div>
+          <div class="stat-number">52</div>
+          <div class="stat-label">Training Sessions / Year</div>
+        </div>
+        <div class="stat-card accent">
+          <div class="stat-icon">🏆</div>
+          <div class="stat-number gold">2×</div>
+          <div class="stat-label">Competitions / Year</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🇺🇸</div>
+          <div class="stat-number">US</div>
+          <div class="stat-label">Market Focus</div>
+        </div>
+        <div class="stat-card accent">
+          <div class="stat-icon">🎓</div>
+          <div class="stat-number gold">0</div>
+          <div class="stat-label">Experience Required</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <div class="section-label">Who We Are</div>
+          <h2 class="section-title">Investing in Your Financial Future</h2>
+          <div class="divider"></div>
+          <p>The CIC Investment Club is a student-led organisation at Columbia International College dedicated to building financial literacy and investment acumen among our members. Whether you're a complete beginner or already following the markets, our club offers a structured, supportive environment to grow.</p>
+          <p>We believe every student deserves access to financial education. Through weekly training sessions and hands-on simulated trading competitions, we equip members with practical tools they'll carry well beyond their time at CIC.</p>
+          
+          <div class="about-features">
+            <div class="feature-item">
+              <div class="feature-icon">📚</div>
+              <div class="feature-content">
+                <h4>Weekly Training Sessions</h4>
+                <p>Structured lessons on markets, valuation, macro-economics, and portfolio theory — every week, year-round.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">💹</div>
+              <div class="feature-content">
+                <h4>Simulated Stock Competition</h4>
+                <p>Each semester, members compete in a paper-trading competition tracking real U.S. market performance.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon">🤝</div>
+              <div class="feature-content">
+                <h4>Peer Learning Community</h4>
+                <p>Share ideas, debate investment theses, and collaborate through our shared insights platform and group channels.</p>
+              </div>
             </div>
           </div>
-          <div class="feature-item">
-            <div class="feature-icon">💹</div>
-            <div>
-              <h4>Simulated Stock Competition</h4>
-              <p>Each semester, members compete in a paper-trading competition tracking real U.S. market performance.</p>
-            </div>
-          </div>
-          <div class="feature-item">
-            <div class="feature-icon">🤝</div>
-            <div>
-              <h4>Peer Learning Community</h4>
-              <p>Share ideas, debate investment theses, and collaborate through our shared insights platform and group channels.</p>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="about-visual reveal">
-        <div class="about-visual-title">Our Mission</div>
-        <ul class="mission-points">
-          <li>Democratize financial knowledge for all CIC students</li>
-          <li>Build hands-on experience with real market dynamics</li>
-          <li>Develop critical thinking through investment analysis</li>
-          <li>Foster a collaborative, inclusive investing community</li>
-          <li>Prepare members for future finance careers and studies</li>
-          <li>Bridge the gap between classroom theory and real markets</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- TEAM -->
-<section id="team">
-  <div class="container">
-    <div class="section-label">Leadership</div>
-    <h2 class="section-title">Executive Team</h2>
-    <div class="divider"></div>
-    <p class="section-subtitle">Our club is led by a dedicated team of student executives who plan events, develop curriculum, and keep our community thriving.</p>
-    <div class="team-grid">
-      <div class="team-card reveal">
-        <div class="team-avatar">T</div>
-        <div class="team-name">Tianlang Li</div>
-        <div class="team-role">President</div>
-        <div class="team-year">Class of 2024</div>
-      </div>
-      <div class="team-card reveal">
-        <div class="team-avatar">H</div>
-        <div class="team-name">Hanying Weng</div>
-        <div class="team-role">Vice President</div>
-        <div class="team-year">Class of 2025</div>
-      </div>
-      <div class="team-card reveal">
-        <div class="team-avatar">L</div>
-        <div class="team-name">Le Minh</div>
-        <div class="team-role">Technology Lead</div>
-        <div class="team-year">Class of 2024</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ACTIVITIES -->
-<section id="activities">
-  <div class="container">
-    <div class="section-label">What We Do</div>
-    <h2 class="section-title">Club Activities</h2>
-    <div class="divider"></div>
-    <p class="section-subtitle">From structured weekly sessions to semester-long competitions, every activity is designed to sharpen your financial edge.</p>
-    <div class="activities-grid">
-      <div class="activity-card reveal">
-        <div class="activity-header">
-          <span class="activity-emoji">📊</span>
-          <div class="activity-title">Weekly Training Sessions</div>
-          <span class="activity-freq">Every Week</span>
-        </div>
-        <div class="activity-body">
-          <p>Our flagship weekly sessions cover a broad curriculum — from foundational concepts like reading a balance sheet, to advanced topics like discounted cash flow analysis and options strategies.</p>
-          <ul class="activity-details">
-            <li>60–90 minute structured lessons each week</li>
-            <li>Guest speakers from finance and business fields</li>
-            <li>Collaborative case studies and market discussion</li>
-            <li>Open to all levels — beginners are very welcome</li>
-          </ul>
-        </div>
-      </div>
-      <div class="activity-card reveal">
-        <div class="activity-header">
-          <span class="activity-emoji">🏆</span>
-          <div class="activity-title">Simulated Stock Competition</div>
-          <span class="activity-freq">Each Semester</span>
-        </div>
-        <div class="activity-body">
-          <p>Each semester, members compete in a paper-trading competition using a virtual portfolio pegged to real U.S. market prices. Build your own portfolio, test your thesis, and compete for the top position.</p>
-          <ul class="activity-details">
-            <li>Virtual portfolio starting at $100,000 USD</li>
-            <li>Real-time prices via simulated trading platform</li>
-            <li>Mid-competition strategy reviews and check-ins</li>
-            <li>End-of-semester awards ceremony for top performers</li>
+        <div class="about-visual reveal">
+          <div class="about-visual-title">Our Mission</div>
+          <ul class="mission-points">
+            <li>Democratize financial knowledge for all CIC students</li>
+            <li>Build hands-on experience with real market dynamics</li>
+            <li>Develop critical thinking through investment analysis</li>
+            <li>Foster a collaborative, inclusive investing community</li>
+            <li>Prepare members for future finance careers and studies</li>
+            <li>Bridge the gap between classroom theory and real markets</li>
           </ul>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- EVENTS -->
-<section id="events">
-  <div class="container">
-    <div class="events-header">
-      <div class="section-label">Schedule</div>
-      <h2 class="section-title">Upcoming Events</h2>
+  <!-- TEAM SECTION -->
+  <section id="team">
+    <div class="container">
+      <div class="section-label">Leadership</div>
+      <h2 class="section-title">Executive Team</h2>
       <div class="divider"></div>
-      <p class="section-subtitle">Stay up to date with our latest sessions, competitions, and club milestones.</p>
-    </div>
-    <div class="events-list">
-      <div class="event-item reveal">
-        <div class="event-date-box"><div class="event-month">Apr</div><div class="event-day">07</div></div>
-        <div class="event-info">
-          <h4>Weekly Training Session — Introduction to Technical Analysis</h4>
-          <p>📍 Room TBD · Columbia International College · 4:00 PM – 5:30 PM</p>
+      <p class="section-subtitle">Our club is led by a dedicated team of student executives who plan events, develop curriculum, and keep our community thriving.</p>
+      
+      <div class="team-grid">
+        <div class="team-card card reveal">
+          <div class="team-avatar">T</div>
+          <div class="team-name">Tianlang Li</div>
+          <div class="team-role">President</div>
+          <div class="team-year">Class of 2024</div>
         </div>
-        <span class="event-tag upcoming">Upcoming</span>
-      </div>
-      <div class="event-item reveal">
-        <div class="event-date-box"><div class="event-month">Apr</div><div class="event-day">14</div></div>
-        <div class="event-info">
-          <h4>Weekly Training Session — Earnings Season Deep Dive</h4>
-          <p>📍 Room TBD · Columbia International College · 4:00 PM – 5:30 PM</p>
+        <div class="team-card card reveal">
+          <div class="team-avatar">H</div>
+          <div class="team-name">Hanying Weng</div>
+          <div class="team-role">Vice President</div>
+          <div class="team-year">Class of 2025</div>
         </div>
-        <span class="event-tag upcoming">Upcoming</span>
-      </div>
-      <div class="event-item reveal">
-        <div class="event-date-box"><div class="event-month">Apr</div><div class="event-day">28</div></div>
-        <div class="event-info">
-          <h4>Spring Semester Stock Competition — Mid-Point Portfolio Review</h4>
-          <p>📍 Main Hall · Columbia International College · 3:30 PM – 5:00 PM</p>
+        <div class="team-card card reveal">
+          <div class="team-avatar">L</div>
+          <div class="team-name">Le Minh</div>
+          <div class="team-role">Technology Lead</div>
+          <div class="team-year">Class of 2024</div>
         </div>
-        <span class="event-tag comp">Competition</span>
-      </div>
-      <div class="event-item reveal">
-        <div class="event-date-box"><div class="event-month">Jun</div><div class="event-day">15</div></div>
-        <div class="event-info">
-          <h4>Spring Semester Awards Ceremony & End-of-Year Celebration</h4>
-          <p>📍 Venue TBD · Columbia International College · 5:00 PM – 7:00 PM</p>
-        </div>
-        <span class="event-tag award">Awards</span>
-      </div>
-      <div class="event-item reveal">
-        <div class="event-date-box" style="padding:6px 13px;"><div class="event-month">Every</div><div class="event-day" style="font-size:1rem;line-height:1.4;">Mon</div></div>
-        <div class="event-info">
-          <h4>Weekly Training Session — Recurring All Year</h4>
-          <p>📍 Room TBD · Columbia International College · 4:00 PM – 5:30 PM</p>
-        </div>
-        <span class="event-tag recurring">Recurring</span>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- INSIGHTS -->
-<section id="insights">
-  <div class="container">
-    <div class="section-label">Member Writing</div>
-    <h2 class="section-title">Market Insights</h2>
-    <div class="divider"></div>
-    <p class="section-subtitle">Short-form analysis and perspectives written by our members. We believe the best way to learn is to share.</p>
-    <div class="insights-grid">
-      <div class="insight-card reveal">
-        <div class="insight-tag-bar"><span class="insight-category cat-macro">Macro</span><span class="insight-date">Mar 22, 2026</span></div>
-        <div class="insight-body">
-          <div class="insight-title">What Rising Bond Yields Mean for Equity Investors</div>
-          <div class="insight-excerpt">As the Fed holds rates elevated, the 10-year Treasury yield has climbed past 4.8%. Here's how that reshapes the equity risk premium and where opportunities may still exist in this environment...</div>
+  <!-- ACTIVITIES SECTION -->
+  <section id="activities">
+    <div class="container">
+      <div class="section-label">What We Do</div>
+      <h2 class="section-title">Club Activities</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">From structured weekly sessions to semester-long competitions, every activity is designed to sharpen your financial edge.</p>
+      
+      <div class="activities-grid">
+        <div class="activity-card reveal">
+          <div class="activity-header">
+            <span class="activity-emoji">📊</span>
+            <div class="activity-title">Weekly Training Sessions</div>
+            <span class="activity-freq">Every Week</span>
+          </div>
+          <div class="activity-body">
+            <p>Our flagship weekly sessions cover a broad curriculum — from foundational concepts like reading a balance sheet, to advanced topics like discounted cash flow analysis and options strategies.</p>
+            <ul class="activity-details">
+              <li>60–90 minute structured lessons each week</li>
+              <li>Guest speakers from finance and business fields</li>
+              <li>Collaborative case studies and market discussion</li>
+              <li>Open to all levels — beginners are very welcome</li>
+            </ul>
+          </div>
         </div>
-        <div class="insight-footer">
-          <div class="insight-author-avatar">AB</div>
-          <span class="insight-author-name">Member Placeholder</span>
-          <a href="#" class="insight-read-more">Read →</a>
-        </div>
-      </div>
-      <div class="insight-card reveal">
-        <div class="insight-tag-bar"><span class="insight-category cat-equity">Equity</span><span class="insight-date">Mar 15, 2026</span></div>
-        <div class="insight-body">
-          <div class="insight-title">Why NVIDIA's Moat Is Harder to Replicate Than It Looks</div>
-          <div class="insight-excerpt">Beyond the GPU hardware, NVIDIA's CUDA ecosystem creates a software lock-in that competitors AMD and Intel have struggled to break. A qualitative look at the real competitive advantage...</div>
-        </div>
-        <div class="insight-footer">
-          <div class="insight-author-avatar">CD</div>
-          <span class="insight-author-name">Member Placeholder</span>
-          <a href="#" class="insight-read-more">Read →</a>
-        </div>
-      </div>
-      <div class="insight-card reveal">
-        <div class="insight-tag-bar"><span class="insight-category cat-strategy">Strategy</span><span class="insight-date">Mar 08, 2026</span></div>
-        <div class="insight-body">
-          <div class="insight-title">The Case for Sector Rotation in Late-Cycle Markets</div>
-          <div class="insight-excerpt">Historical data suggests that energy, healthcare, and consumer staples tend to outperform in late economic cycles. How should a student investor rebalance their paper portfolio in Q2?...</div>
-        </div>
-        <div class="insight-footer">
-          <div class="insight-author-avatar">EF</div>
-          <span class="insight-author-name">Member Placeholder</span>
-          <a href="#" class="insight-read-more">Read →</a>
-        </div>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:2.5rem;">
-      <a href="#" class="btn-primary" style="background:var(--crimson);color:white;">View All Insights →</a>
-    </div>
-  </div>
-</section>
 
-<!-- GALLERY -->
-<section id="gallery">
-  <div class="container">
-    <div class="section-label">Club Life</div>
-    <h2 class="section-title">Photo Gallery</h2>
-    <div class="divider"></div>
-    <p class="section-subtitle">A glimpse into our sessions, events, and community moments — updated throughout the year.</p>
-    <div class="gallery-grid">
-      <div class="gallery-item tall reveal">
-        <img src="https://drive.google.com/thumbnail?id=1f6TAi7HenKvozl41_WewoEFQzH45q8C-&sz=w1000" style="width:100%;height:100%;object-fit:cover;" alt="Award Ceremony" />
-      </div>
-      <div class="gallery-item reveal">
-        <img src="https://drive.google.com/thumbnail?id=18W9NLoQG8ZgMoIbLZq_6lOn3e5eBrE48&sz=w1000" style="width:100%;height:100%;object-fit:cover;" alt="Club Activity" />
-      </div>
-      <div class="gallery-item reveal">
-        <img src="https://drive.google.com/thumbnail?id=15aNfbIVxuskJTHH686wnpfr-_p5Rzlc1&sz=w1000" style="width:100%;height:100%;object-fit:cover;" alt="Club Activity" />
-      </div>
-      <div class="gallery-item wide reveal">
-        <div class="gallery-placeholder"><span>🤝</span><span>Team Event</span></div>
-      </div>
-      <div class="gallery-item reveal">
-        <div class="gallery-placeholder"><span>📊</span><span>Workshop</span></div>
+        <div class="activity-card reveal">
+          <div class="activity-header">
+            <span class="activity-emoji">🏆</span>
+            <div class="activity-title">Simulated Stock Competition</div>
+            <span class="activity-freq">Each Semester</span>
+          </div>
+          <div class="activity-body">
+            <p>Each semester, members compete in a paper-trading competition using a virtual portfolio pegged to real U.S. market prices. Build your own portfolio, test your thesis, and compete for the top position.</p>
+            <ul class="activity-details">
+              <li>Virtual portfolio starting at $100,000 USD</li>
+              <li>Real-time prices via simulated trading platform</li>
+              <li>Mid-competition strategy reviews and check-ins</li>
+              <li>End-of-semester awards ceremony for top performers</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
-    <p class="gallery-upload-note">📷 Photos will be uploaded as events take place. Follow us on social media for live updates.</p>
-  </div>
-</section>
+  </section>
 
-<!-- RESOURCES -->
-<section id="resources">
-  <div class="container">
-    <div class="section-label">Learning Hub</div>
-    <h2 class="section-title">Resources & Materials</h2>
-    <div class="divider"></div>
-    <p class="section-subtitle">Curated tools and content to help you learn at your own pace, beyond our weekly sessions.</p>
-    <div class="resources-grid">
-      <div class="resource-card reveal">
-        <div class="resource-icon">📖</div>
-        <h3>Beginner's Guide to Investing</h3>
-        <p>A curated reading list for members new to financial markets — covering stocks, bonds, ETFs, and basic valuation concepts.</p>
-        <a href="#" class="resource-link">Access Guide →</a>
-      </div>
-      <div class="resource-card reveal">
-        <div class="resource-icon">📉</div>
-        <h3>Financial Modeling Templates</h3>
-        <p>Excel and Google Sheets templates used in our training sessions — DCF models, comparable analysis, and portfolio trackers.</p>
-        <a href="#" class="resource-link">Download Templates →</a>
-      </div>
-      <div class="resource-card reveal">
-        <div class="resource-icon">🎧</div>
-        <h3>Recommended Podcasts & Media</h3>
-        <p>Our curated list of finance podcasts, YouTube channels, and news sources to stay informed — from beginner to advanced.</p>
-        <a href="#" class="resource-link">View List →</a>
-      </div>
-      <div class="resource-card reveal">
-        <div class="resource-icon">📝</div>
-        <h3>Session Slide Decks</h3>
-        <p>Presentation slides from past training sessions, organised by topic. Missed a session? Catch up at your own pace.</p>
-        <a href="#" class="resource-link">Browse Slides →</a>
-      </div>
-      <div class="resource-card reveal">
-        <div class="resource-icon">🧮</div>
-        <h3>Key Investment Ratios Glossary</h3>
-        <p>A quick-reference guide to the most important financial ratios — P/E, EV/EBITDA, ROE, and more — with plain-language explanations.</p>
-        <a href="#" class="resource-link">Open Glossary →</a>
-      </div>
-      <div class="resource-card reveal">
-        <div class="resource-icon">🌐</div>
-        <h3>Useful Market Tools</h3>
-        <p>Links to free tools our members use: Yahoo Finance, Finviz screener, SEC EDGAR, Macrotrends, and simulated trading platforms.</p>
-        <a href="#" class="resource-link">Explore Tools →</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- RECRUITMENT -->
-<section id="recruitment">
-  <div class="container">
-    <div class="recruitment-inner">
-      <div class="reveal">
-        <div class="section-label">Join Us</div>
-        <h2 class="section-title">Become a Member</h2>
+  <!-- EVENTS SECTION -->
+  <section id="events">
+    <div class="container">
+      <div class="events-header">
+        <div class="section-label">Schedule</div>
+        <h2 class="section-title">Upcoming Events</h2>
         <div class="divider"></div>
-        <p class="section-subtitle">We welcome students from all academic backgrounds. No prior finance knowledge needed — just curiosity and a willingness to learn.</p>
-        <ul class="perks-list">
-          <li><span class="perk-check">✓</span>Access to all weekly training sessions and materials</li>
-          <li><span class="perk-check">✓</span>Participate in the semesterly stock competition</li>
-          <li><span class="perk-check">✓</span>Publish your own market insights on our platform</li>
-          <li><span class="perk-check">✓</span>Network with like-minded peers and guest speakers</li>
-          <li><span class="perk-check">✓</span>Build a portfolio of real analytical work</li>
-          <li><span class="perk-check">✓</span>Leadership and executive roles available to all members</li>
-        </ul>
+        <p class="section-subtitle">Stay up to date with our latest sessions, competitions, and club milestones.</p>
       </div>
-      <div class="recruitment-form-card reveal">
-        <h3>Express Your Interest</h3>
-        <p>Fill out the form below and we'll be in touch with next steps and onboarding info.</p>
-        <form action="https://formspree.io/f/xykbwqvd" method="POST">
-        <div class="form-group">
-          <label>Full Name</label>
-          <input type="text" name="Full Name" placeholder="Your full name" />
-        </div>
-        <div class="form-group">
-          <label>Student Email</label>
-          <input type="email" name="Email" placeholder="your.email@cic.on.ca" />
-        </div>
-        <div class="form-group">
-          <label>Grade / Year</label>
-          <select name="Grade">
-            <option value="">Select your grade</option>
-            <option>Grade 10</option>
-            <option>Grade 11</option>
-            <option>Grade 12</option>
-            <option>University Preparation</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Prior Investing Experience</label>
-          <select name="Experience">
-            <option value="">Select one</option>
-            <option>No experience — complete beginner</option>
-            <option>Some knowledge from class or self-study</option>
-            <option>I follow the markets regularly</option>
-            <option>I have hands-on trading or analysis experience</option>
-          </select>
-        </div>
-        <button type="submit" class="btn-submit">Submit Application →</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- CONTACT -->
-<section id="contact">
-  <div class="container">
-    <div class="contact-grid">
-      <div class="reveal">
-        <div class="section-label">Get in Touch</div>
-        <h2 class="section-title">Contact Us</h2>
-        <div class="divider"></div>
-        <p class="section-subtitle" style="margin-bottom:1.5rem;">Have a question, an idea, or want to collaborate? We'd love to hear from you.</p>
-        <div class="contact-methods">
-          <a href="mailto:investmentclubincic@gmail.com" class="contact-item">
-            <div class="contact-icon">✉️</div>
-            <div>
-              <div class="contact-label">Email</div>
-              <div class="contact-value">investmentclubincic@gmail.com</div>
-            </div>
-          </a>
-          <a href="#" class="contact-item">
-            <div class="contact-icon">📸</div>
-            <div>
-              <div class="contact-label">Instagram</div>
-              <div class="contact-value">@cicinvestmentclub</div>
-            </div>
-          </a>
-          <a href="#" class="contact-item">
-            <div class="contact-icon">💼</div>
-            <div>
-              <div class="contact-label">LinkedIn</div>
-              <div class="contact-value">CIC Investment Club</div>
-            </div>
-          </a>
-          <a href="#" class="contact-item">
-            <div class="contact-icon">💬</div>
-            <div>
-              <div class="contact-label">Discord / Group Chat</div>
-              <div class="contact-value">Link shared upon joining</div>
-            </div>
-          </a>
+      <div class="events-list">
+        <div class="event-item reveal">
+          <div class="event-date-box">
+            <div class="event-month">Apr</div>
+            <div class="event-day">07</div>
+          </div>
+          <div class="event-info">
+            <h4>Weekly Training Session — Introduction to Technical Analysis</h4>
+            <p>📍 Room TBD · Columbia International College · 4:00 PM – 5:30 PM</p>
+          </div>
+          <span class="event-tag upcoming">Upcoming</span>
         </div>
-      </div>
-      <div class="map-area reveal">
-        <h3>📍 Find Us on Campus</h3>
-        <p>We meet weekly at Columbia International College in Hamilton, Ontario.</p>
-        <div class="office-detail"><span class="dot"></span>Columbia International College</div>
-        <div class="office-detail"><span class="dot"></span>1003 Main St W, Hamilton, ON L8S 1B7</div>
-        <div class="office-detail"><span class="dot"></span>Weekly meetings — Mondays and Fridays, 4:00 PM - 5:00 PM</div>
-        <div class="office-detail"><span class="dot"></span>Room 216</div>
-        <div class="office-detail"><span class="dot"></span>All CIC students welcome to drop in</div>
+
+        <div class="event-item reveal">
+          <div class="event-date-box">
+            <div class="event-month">Apr</div>
+            <div class="event-day">14</div>
+          </div>
+          <div class="event-info">
+            <h4>Weekly Training Session — Earnings Season Deep Dive</h4>
+            <p>📍 Room TBD · Columbia International College · 4:00 PM – 5:30 PM</p>
+          </div>
+          <span class="event-tag upcoming">Upcoming</span>
+        </div>
+
+        <div class="event-item reveal">
+          <div class="event-date-box">
+            <div class="event-month">Apr</div>
+            <div class="event-day">28</div>
+          </div>
+          <div class="event-info">
+            <h4>Spring Semester Stock Competition — Mid-Point Portfolio Review</h4>
+            <p>📍 Main Hall · Columbia International College · 3:30 PM – 5:00 PM</p>
+          </div>
+          <span class="event-tag comp">Competition</span>
+        </div>
+
+        <div class="event-item reveal">
+          <div class="event-date-box">
+            <div class="event-month">Jun</div>
+            <div class="event-day">15</div>
+          </div>
+          <div class="event-info">
+            <h4>Spring Semester Awards Ceremony & End-of-Year Celebration</h4>
+            <p>📍 Venue TBD · Columbia International College · 5:00 PM – 7:00 PM</p>
+          </div>
+          <span class="event-tag award">Awards</span>
+        </div>
+
+        <div class="event-item reveal">
+          <div class="event-date-box event-date-recurring">
+            <div class="event-month">Every</div>
+            <div class="event-day event-day-small">Mon</div>
+          </div>
+          <div class="event-info">
+            <h4>Weekly Training Session — Recurring All Year</h4>
+            <p>📍 Room TBD · Columbia International College · 4:00 PM – 5:30 PM</p>
+          </div>
+          <span class="event-tag recurring">Recurring</span>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-logo">Columbia International College</div>
-  <div class="footer-sub">Investment Club</div>
-  <div class="footer-links">
-    <a href="#about">About</a>
-    <a href="#team">Team</a>
-    <a href="#activities">Activities</a>
-    <a href="#events">Events</a>
-    <a href="#insights">Insights</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#resources">Resources</a>
-    <a href="#recruitment">Join Us</a>
-    <a href="#contact">Contact</a>
-  </div>
-  <div class="footer-divider"></div>
-  <div class="footer-copy">© 2026 CIC Investment Club · Columbia International College · Hamilton, Ontario, Canada</div>
-</footer>
+  <!-- INSIGHTS SECTION -->
+  <section id="insights">
+    <div class="container">
+      <div class="section-label">Member Writing</div>
+      <h2 class="section-title">Market Insights</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">Short-form analysis and perspectives written by our members. We believe the best way to learn is to share.</p>
+      
+      <div class="insights-grid">
+        <div class="insight-card card reveal">
+          <div class="insight-tag-bar">
+            <span class="insight-category cat-macro">Macro</span>
+            <span class="insight-date">Mar 22, 2026</span>
+          </div>
+          <div class="insight-body">
+            <div class="insight-title">What Rising Bond Yields Mean for Equity Investors</div>
+            <div class="insight-excerpt">As the Fed holds rates elevated, the 10-year Treasury yield has climbed past 4.8%. Here's how that reshapes the equity risk premium and where opportunities may still exist in this environment...</div>
+          </div>
+          <div class="insight-footer">
+            <div class="insight-author-avatar">AB</div>
+            <span class="insight-author-name">Member Placeholder</span>
+            <a href="#" class="insight-read-more">Read →</a>
+          </div>
+        </div>
 
-<script src="../javascript/script.js"></script>
+        <div class="insight-card card reveal">
+          <div class="insight-tag-bar">
+            <span class="insight-category cat-equity">Equity</span>
+            <span class="insight-date">Mar 15, 2026</span>
+          </div>
+          <div class="insight-body">
+            <div class="insight-title">Why NVIDIA's Moat Is Harder to Replicate Than It Looks</div>
+            <div class="insight-excerpt">Beyond the GPU hardware, NVIDIA's CUDA ecosystem creates a software lock-in that competitors AMD and Intel have struggled to break. A qualitative look at the real competitive advantage...</div>
+          </div>
+          <div class="insight-footer">
+            <div class="insight-author-avatar">CD</div>
+            <span class="insight-author-name">Member Placeholder</span>
+            <a href="#" class="insight-read-more">Read →</a>
+          </div>
+        </div>
+
+        <div class="insight-card card reveal">
+          <div class="insight-tag-bar">
+            <span class="insight-category cat-strategy">Strategy</span>
+            <span class="insight-date">Mar 08, 2026</span>
+          </div>
+          <div class="insight-body">
+            <div class="insight-title">The Case for Sector Rotation in Late-Cycle Markets</div>
+            <div class="insight-excerpt">Historical data suggests that energy, healthcare, and consumer staples tend to outperform in late economic cycles. How should a student investor rebalance their paper portfolio in Q2?...</div>
+          </div>
+          <div class="insight-footer">
+            <div class="insight-author-avatar">EF</div>
+            <span class="insight-author-name">Member Placeholder</span>
+            <a href="#" class="insight-read-more">Read →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="view-all-container">
+        <a href="#" class="btn-primary btn-crimson">View All Insights →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section id="gallery">
+    <div class="container">
+      <div class="section-label">Club Life</div>
+      <h2 class="section-title">Photo Gallery</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">A glimpse into our sessions, events, and community moments — updated throughout the year.</p>
+      
+      <div class="gallery-grid">
+        <div class="gallery-item tall reveal">
+          <img src="https://drive.google.com/thumbnail?id=1f6TAi7HenKvozl41_WewoEFQzH45q8C-&sz=w1000" class="gallery-img" alt="Award Ceremony" />
+        </div>
+        <div class="gallery-item reveal">
+          <img src="https://drive.google.com/thumbnail?id=18W9NLoQG8ZgMoIbLZq_6lOn3e5eBrE48&sz=w1000" class="gallery-img" alt="Club Activity" />
+        </div>
+        <div class="gallery-item reveal">
+          <img src="https://drive.google.com/thumbnail?id=15aNfbIVxuskJTHH686wnpfr-_p5Rzlc1&sz=w1000" class="gallery-img" alt="Club Activity" />
+        </div>
+        <div class="gallery-item wide reveal">
+          <div class="gallery-placeholder">
+            <span>🤝</span>
+            <span>Team Event</span>
+          </div>
+        </div>
+        <div class="gallery-item reveal">
+          <div class="gallery-placeholder">
+            <span>📊</span>
+            <span>Workshop</span>
+          </div>
+        </div>
+      </div>
+      <p class="gallery-upload-note">📷 Photos will be uploaded as events take place. Follow us on social media for live updates.</p>
+    </div>
+  </section>
+
+  <!-- RESOURCES SECTION -->
+  <section id="resources">
+    <div class="container">
+      <div class="section-label">Learning Hub</div>
+      <h2 class="section-title">Resources & Materials</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">Curated tools and content to help you learn at your own pace, beyond our weekly sessions.</p>
+      
+      <div class="resources-grid">
+        <div class="resource-card card reveal">
+          <div class="resource-icon">📖</div>
+          <h3>Beginner's Guide to Investing</h3>
+          <p>A curated reading list for members new to financial markets — covering stocks, bonds, ETFs, and basic valuation concepts.</p>
+          <a href="#" class="resource-link">Access Guide →</a>
+        </div>
+        <div class="resource-card card reveal">
+          <div class="resource-icon">📉</div>
+          <h3>Financial Modeling Templates</h3>
+          <p>Excel and Google Sheets templates used in our training sessions — DCF models, comparable analysis, and portfolio trackers.</p>
+          <a href="#" class="resource-link">Download Templates →</a>
+        </div>
+        <div class="resource-card card reveal">
+          <div class="resource-icon">🎧</div>
+          <h3>Recommended Podcasts & Media</h3>
+          <p>Our curated list of finance podcasts, YouTube channels, and news sources to stay informed — from beginner to advanced.</p>
+          <a href="#" class="resource-link">View List →</a>
+        </div>
+        <div class="resource-card card reveal">
+          <div class="resource-icon">📝</div>
+          <h3>Session Slide Decks</h3>
+          <p>Presentation slides from past training sessions, organised by topic. Missed a session? Catch up at your own pace.</p>
+          <a href="#" class="resource-link">Browse Slides →</a>
+        </div>
+        <div class="resource-card card reveal">
+          <div class="resource-icon">🧮</div>
+          <h3>Key Investment Ratios Glossary</h3>
+          <p>A quick-reference guide to the most important financial ratios — P/E, EV/EBITDA, ROE, and more — with plain-language explanations.</p>
+          <a href="#" class="resource-link">Open Glossary →</a>
+        </div>
+        <div class="resource-card card reveal">
+          <div class="resource-icon">🌐</div>
+          <h3>Useful Market Tools</h3>
+          <p>Links to free tools our members use: Yahoo Finance, Finviz screener, SEC EDGAR, Macrotrends, and simulated trading platforms.</p>
+          <a href="#" class="resource-link">Explore Tools →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECRUITMENT SECTION -->
+  <section id="recruitment">
+    <div class="container">
+      <div class="recruitment-inner">
+        <div class="recruitment-text reveal">
+          <div class="section-label">Join Us</div>
+          <h2 class="section-title">Become a Member</h2>
+          <div class="divider"></div>
+          <p class="section-subtitle">We welcome students from all academic backgrounds. No prior finance knowledge needed — just curiosity and a willingness to learn.</p>
+          <ul class="perks-list">
+            <li><span class="perk-check">✓</span>Access to all weekly training sessions and materials</li>
+            <li><span class="perk-check">✓</span>Participate in the semesterly stock competition</li>
+            <li><span class="perk-check">✓</span>Publish your own market insights on our platform</li>
+            <li><span class="perk-check">✓</span>Network with like-minded peers and guest speakers</li>
+            <li><span class="perk-check">✓</span>Build a portfolio of real analytical work</li>
+            <li><span class="perk-check">✓</span>Leadership and executive roles available to all members</li>
+          </ul>
+        </div>
+
+        <div class="recruitment-form-card reveal">
+          <h3>Express Your Interest</h3>
+          <p>Fill out the form below and we'll be in touch with next steps and onboarding info.</p>
+          <form action="https://formspree.io/f/xykbwqvd" method="POST">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" name="Full Name" placeholder="Your full name" required />
+            </div>
+            <div class="form-group">
+              <label>Student Email</label>
+              <input type="email" name="Email" placeholder="your.email@cic.on.ca" required />
+            </div>
+            <div class="form-group">
+              <label>Grade / Year</label>
+              <select name="Grade" required>
+                <option value="">Select your grade</option>
+                <option>Grade 10</option>
+                <option>Grade 11</option>
+                <option>Grade 12</option>
+                <option>University Preparation</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Prior Investing Experience</label>
+              <select name="Experience" required>
+                <option value="">Select one</option>
+                <option>No experience — complete beginner</option>
+                <option>Some knowledge from class or self-study</option>
+                <option>I follow the markets regularly</option>
+                <option>I have hands-on trading or analysis experience</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-submit">Submit Application →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="section-label">Get in Touch</div>
+          <h2 class="section-title">Contact Us</h2>
+          <div class="divider"></div>
+          <p class="section-subtitle contact-subtitle">Have a question, an idea, or want to collaborate? We'd love to hear from you.</p>
+          
+          <div class="contact-methods">
+            <a href="mailto:investmentclubincic@gmail.com" class="contact-item">
+              <div class="contact-icon">✉️</div>
+              <div class="contact-details">
+                <div class="contact-label">Email</div>
+                <div class="contact-value">investmentclubincic@gmail.com</div>
+              </div>
+            </a>
+            <a href="#" class="contact-item">
+              <div class="contact-icon">📸</div>
+              <div class="contact-details">
+                <div class="contact-label">Instagram</div>
+                <div class="contact-value">@cicinvestmentclub</div>
+              </div>
+            </a>
+            <a href="#" class="contact-item">
+              <div class="contact-icon">💼</div>
+              <div class="contact-details">
+                <div class="contact-label">LinkedIn</div>
+                <div class="contact-value">CIC Investment Club</div>
+              </div>
+            </a>
+            <a href="#" class="contact-item">
+              <div class="contact-icon">💬</div>
+              <div class="contact-details">
+                <div class="contact-label">Discord / Group Chat</div>
+                <div class="contact-value">Link shared upon joining</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="map-area reveal">
+          <h3>📍 Find Us on Campus</h3>
+          <p>We meet weekly at Columbia International College in Hamilton, Ontario.</p>
+          <div class="office-detail"><span class="dot"></span>Columbia International College</div>
+          <div class="office-detail"><span class="dot"></span>1003 Main St W, Hamilton, ON L8S 1B7</div>
+          <div class="office-detail"><span class="dot"></span>Weekly meetings — Mondays and Fridays, 4:00 PM - 5:00 PM</div>
+          <div class="office-detail"><span class="dot"></span>Room 216</div>
+          <div class="office-detail"><span class="dot"></span>All CIC students welcome to drop in</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Columbia International College</div>
+    <div class="footer-sub">Investment Club</div>
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#team">Team</a>
+      <a href="#activities">Activities</a>
+      <a href="#events">Events</a>
+      <a href="#insights">Insights</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#resources">Resources</a>
+      <a href="#recruitment">Join Us</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-copy">© 2026 CIC Investment Club · Columbia International College · Hamilton, Ontario, Canada</div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../javascript/script.js"></script>
 </body>
 </html>
