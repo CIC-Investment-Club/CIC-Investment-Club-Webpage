@@ -42,3 +42,14 @@ img {
   max-width: 100%;
   display: block;
 }
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.ticker-error {
+  color: rgba(255, 255, 255, 0.4);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0 2rem;
+}

@@ -23,7 +23,7 @@
   <!-- NAVIGATION -->
   <nav>
     <a href="#hero" class="nav-logo">
-      <img src="../Logo.png" class="nav-logo-img" alt="CIC Logo" />
+      <img src="../Logo.png" class="nav-logo-img" alt="CIC Logo" loading="lazy" />
       <div class="nav-logo-text">
         <span>Columbia International College</span>
         <span>Investment Club</span>
@@ -34,6 +34,7 @@
       <li><a href="#team">Team</a></li>
       <li><a href="#activities">Activities</a></li>
       <li><a href="#insights">Insights</a></li>
+      <li><a href="#tools">Tools</a></li>
       <li><a href="#resources">Resources</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="#recruitment" class="nav-cta">Join Us →</a></li>
@@ -368,13 +369,13 @@
       
       <div class="gallery-grid">
         <div class="gallery-item tall reveal">
-          <img src="https://drive.google.com/thumbnail?id=1f6TAi7HenKvozl41_WewoEFQzH45q8C-&sz=w1000" class="gallery-img" alt="Award Ceremony" />
+          <img src="https://drive.google.com/thumbnail?id=1f6TAi7HenKvozl41_WewoEFQzH45q8C-&sz=w1000" class="gallery-img" alt="Award Ceremony" loading="lazy" />
         </div>
         <div class="gallery-item reveal">
-          <img src="https://drive.google.com/thumbnail?id=18W9NLoQG8ZgMoIbLZq_6lOn3e5eBrE48&sz=w1000" class="gallery-img" alt="Club Activity" />
+          <img src="https://drive.google.com/thumbnail?id=18W9NLoQG8ZgMoIbLZq_6lOn3e5eBrE48&sz=w1000" class="gallery-img" alt="Club Activity" loading="lazy" />
         </div>
         <div class="gallery-item reveal">
-          <img src="https://drive.google.com/thumbnail?id=15aNfbIVxuskJTHH686wnpfr-_p5Rzlc1&sz=w1000" class="gallery-img" alt="Club Activity" />
+          <img src="https://drive.google.com/thumbnail?id=15aNfbIVxuskJTHH686wnpfr-_p5Rzlc1&sz=w1000" class="gallery-img" alt="Club Activity" loading="lazy" />
         </div>
         <div class="gallery-item wide reveal">
           <div class="gallery-placeholder">
@@ -437,6 +438,60 @@
           <h3>Useful Market Tools</h3>
           <p>Links to free tools our members use: Yahoo Finance, Finviz screener, SEC EDGAR, Macrotrends, and simulated trading platforms.</p>
           <a href="#" class="resource-link">Explore Tools →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLS SECTION -->
+  <section id="tools">
+    <div class="container">
+      <div class="section-label">Interactive</div>
+      <h2 class="section-title">Investment Tools</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">Visualize your financial future with our interactive calculator. See how small, consistent investments grow over time.</p>
+      
+      <div class="calculator-card reveal">
+        <div class="calc-header">
+          <h3>Compound Interest Calculator</h3>
+          <p>Compound interest is the eighth wonder of the world. He who understands it, earns it; he who doesn't, pays it.</p>
+        </div>
+        <div class="calc-grid">
+          <div class="calc-inputs">
+            <div class="calc-group">
+              <label>Initial Investment ($)</label>
+              <input type="number" id="calc-initial" value="1000" step="100" />
+            </div>
+            <div class="calc-group">
+              <label>Monthly Contribution ($)</label>
+              <input type="number" id="calc-monthly" value="100" step="10" />
+            </div>
+            <div class="calc-group">
+              <label>Time Horizon (Years)</label>
+              <input type="range" id="calc-years" min="1" max="40" value="10" />
+              <div class="range-val"><span id="years-display">10</span> years</div>
+            </div>
+            <div class="calc-group">
+              <label>Estimated Annual Return (%)</label>
+              <input type="range" id="calc-return" min="1" max="15" value="8" />
+              <div class="range-val"><span id="return-display">8</span>%</div>
+            </div>
+          </div>
+          <div class="calc-result">
+            <div class="result-label">Estimated Total Balance</div>
+            <div class="result-value" id="calc-total">$19,496</div>
+            <div class="result-breakdown">
+              <div class="breakdown-item">
+                <span>Total Contributions</span>
+                <span id="calc-contrib">$13,000</span>
+              </div>
+              <div class="breakdown-item">
+                <span>Interest Earned</span>
+                <span id="calc-interest" class="gold">$6,496</span>
+              </div>
+            </div>
+            <p class="calc-disclaimer">* This is a simplified projection for educational purposes. Real market returns vary.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -563,8 +618,9 @@
       <a href="#about">About</a>
       <a href="#team">Team</a>
       <a href="#activities">Activities</a>
-      <a href="#events">Events</a>
+      <li><a href="#events">Events</a></li>
       <a href="#insights">Insights</a>
+      <a href="#tools">Tools</a>
       <a href="#gallery">Gallery</a>
       <a href="#resources">Resources</a>
       <a href="#recruitment">Join Us</a>
@@ -575,6 +631,7 @@
   </footer>
 
   <!-- Scripts -->
+  <button id="back-to-top" aria-label="Back to Top">↑</button>
   <script src="../javascript/script.js"></script>
 </body>
 </html>
