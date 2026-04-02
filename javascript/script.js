@@ -8,25 +8,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- COMPONENT LOADER ---
   const sections = [
-    { id: 'nav-container', file: 'nav.html' },
-    { id: 'ticker-container', file: 'ticker.html' },
-    { id: 'hero-container', file: 'hero.html' },
-    { id: 'about-container', file: 'about.html' },
-    { id: 'team-container', file: 'team.html' },
-    { id: 'activities-container', file: 'activities.html' },
-    { id: 'events-container', file: 'events.html' },
-    { id: 'insights-container', file: 'insights.html' },
-    { id: 'tools-container', file: 'tools.html' },
-    { id: 'gallery-container', file: 'gallery.html' },
-    { id: 'resources-container', file: 'resources.html' },
-    { id: 'recruitment-container', file: 'recruitment.html' },
-    { id: 'contact-container', file: 'contact.html' },
-    { id: 'footer-container', file: 'footer.html' }
+    { id: 'nav-container', file: '../sections/nav.html' },
+    { id: 'ticker-container', file: '../sections/ticker.html' },
+    { id: 'hero-container', file: '../sections/hero.html' },
+    { id: 'about-container', file: '../sections/about.html' },
+    { id: 'team-container', file: '../sections/team.html' },
+    { id: 'activities-container', file: '../sections/activities.html' },
+    { id: 'events-container', file: '../sections/events.html' },
+    { id: 'insights-container', file: '../sections/insights.html' },
+    { id: 'tools-container', file: '../sections/tools.html' },
+    { id: 'gallery-container', file: '../sections/gallery.html' },
+    { id: 'resources-container', file: '../sections/resources.html' },
+    { id: 'recruitment-container', file: '../sections/recruitment.html' },
+    { id: 'contact-container', file: '../sections/contact.html' },
+    { id: 'footer-container', file: '../sections/footer.html' }
   ];
 
   async function loadComponent({ id, file }) {
     try {
-      const response = await fetch(`./sections/${file}`);
+      const response = await fetch(`./html/sections/${file}`);
       if (!response.ok) throw new Error(`Could not load ${file}`);
       const html = await response.text();
       document.getElementById(id).innerHTML = html;
