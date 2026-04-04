@@ -26,5 +26,26 @@ For investors, the key is always to ask why prices are moving. A geopolitical su
       <div class="view-all-container">
         <a href="#" class="btn-primary btn-crimson">View All Insights &#8594;</a>
       </div>
+
+      <!-- NEW: Stock Watchlist Component -->
+      <div class="watchlist-container reveal">
+        <div class="watchlist-header">
+          <div class="watchlist-title-group">
+            <div class="section-label">Personalized</div>
+            <h3 class="watchlist-title">Your Market Watchlist</h3>
+          </div>
+          <div class="watchlist-controls">
+            <input type="text" id="watchlist-input" placeholder="Enter Symbol (e.g. AAPL, NVDA, BTC-USD)" />
+            <button id="watchlist-add-btn" class="btn-primary btn-crimson btn-sm">Add Stock</button>
+          </div>
+        </div>
+        <div id="watchlist-items" class="watchlist-grid">
+          <!-- Items will be injected by JavaScript -->
+          <div class="watchlist-empty">
+            <p>Your watchlist is empty. Add a symbol to start tracking.</p>
+          </div>
+        </div>
+        <p class="calc-disclaimer">* Prices are fetched in real-time. Data may be delayed by up to 15 minutes.</p>
+      </div>
     </div>
   </section>
