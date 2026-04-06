@@ -850,6 +850,11 @@
   margin-bottom: 1.8rem;
 }
 
+.recruitment-form-card select option {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
 /* ── CONTACT ── */
 #contact { background: var(--white); }
 
